@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css';
-import SanityClient from '@sanity/client';
+import SanityService from '../services/SanityService';
 
 export default function Home({ home, posts }) {
   console.log(posts);
@@ -17,30 +17,9 @@ export async function getStaticProps() {
     useCdn: process.env.NODE_ENV === 'production',
   });
 
-  const home = await client.fetch(
-    `*[_type == 'home'][0]{'mainPostUrl': mainPost -> slug.current}`
-  );
-
-  const posts = await client.fetch(`
-  *[_type == 'post']{
-    title,
-    subtitle,
-    createdAt,
-    'content' : content[]{
-      ..., 
-      ...select(_type == 'imageGallery' => {'image' :images[]{..., 'ur;': asset-> url} })
-    },
-    'slug': slug.current,
-    'thumbnail' : {
-      'alt': thumbnail.alt,
-      'imageUrl':thumbnail.asset -> url
-    },
-    'author' : author -> {
-      name,
-      role,
-      'image' : image.asset -> url
-    },
-  }`);
+  const sanityService = new SanityService();
+  const home = await sanityService.getHome();
+  const posts = await sanityService.getPosts();
 
   return {
     props: {
