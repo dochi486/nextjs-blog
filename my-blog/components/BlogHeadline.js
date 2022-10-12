@@ -22,8 +22,7 @@ export default function BlogHeadline() {
             fontSize: 24,
           }}
         >
-          게임 클라이언트 개발자에서 웹 프론트엔드 개발자로 전향하는 중인
-          개발자입니다.
+          게임 클라이언트 개발자에서 웹 프론트엔드로 전향하는 중인 개발자입니다.
         </p>
       </Col>
     </Row>
