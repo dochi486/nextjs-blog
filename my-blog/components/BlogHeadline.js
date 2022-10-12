@@ -19,7 +19,7 @@ export default function BlogHeadline() {
         <h1>도치의 블로그</h1>
         <p
           style={{
-            fontSize: 24,
+            fontSize: 17,
           }}
         >
           게임 클라이언트 개발자에서 웹 프론트엔드로 전향하는 중인 개발자입니다.
