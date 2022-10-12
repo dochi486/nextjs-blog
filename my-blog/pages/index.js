@@ -1,19 +1,17 @@
 import styles from '../styles/Home.module.css';
-import sanityClient from '@sanity/client';
+import SanityClient from '@sanity/client';
 
 export default function Home({ home, posts }) {
-  console.log(home);
   console.log(posts);
-
   return (
     <div className={styles.container}>
-      <h1>Blog Home</h1>
+      <h1>Sanity Blog Home</h1>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const client = sanityClient({
+  const client = SanityClient({
     dataset: 'production',
     projectId: 'ozc58i66',
     useCdn: process.env.NODE_ENV === 'production',
@@ -40,7 +38,7 @@ export async function getStaticProps() {
     'author' : author -> {
       name,
       role,
-      'image' : imgae.asset -> url
+      'image' : image.asset -> url
     },
   }`);
 
