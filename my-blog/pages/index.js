@@ -1,8 +1,7 @@
 import styles from '../styles/Home.module.css';
 import SanityService from '../services/SanityService';
-import { Col, Row } from 'antd';
-import Link from 'next/link';
-import { CodeOutlined } from '@ant-design/icons';
+import Header from '../components/Header';
+import BlogHeadline from '../components/BlogHeadline';
 
 export default function Home({ home, posts }) {
   console.log(posts);
@@ -12,27 +11,8 @@ export default function Home({ home, posts }) {
 
   return (
     <div className={styles.container}>
-      <Row
-        align="middle"
-        style={{
-          height: 64,
-        }}
-      >
-        <Col span={24}>
-          <Link href="/">
-            <a>
-              <div
-                style={{
-                  fontSize: 20,
-                  fontWeight: 'bold',
-                }}
-              >
-                <CodeOutlined /> My Blog
-              </div>
-            </a>
-          </Link>
-        </Col>
-      </Row>
+      <Header />
+      <BlogHeadline />
     </div>
   );
 }
