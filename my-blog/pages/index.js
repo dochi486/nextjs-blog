@@ -19,17 +19,18 @@ export default function Home({ home, posts }) {
         }}
       >
         <Col span={24}>
-          <Link href="/"></Link>
-          <a>
-            <div
-              style={{
-                fontSize: 20,
-                fontWeight: 'bold',
-              }}
-            >
-              <CodeOutlined /> My Blog
-            </div>
-          </a>
+          <Link href="/">
+            <a>
+              <div
+                style={{
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                }}
+              >
+                <CodeOutlined /> My Blog
+              </div>
+            </a>
+          </Link>
         </Col>
       </Row>
     </div>
