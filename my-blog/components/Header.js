@@ -19,7 +19,7 @@ export default function Header() {
                 fontWeight: 'bold',
               }}
             >
-              <CodeOutlined /> My Blog
+              <CodeOutlined /> Dochi's Blog
             </div>
           </a>
         </Link>

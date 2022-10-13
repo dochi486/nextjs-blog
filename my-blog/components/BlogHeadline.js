@@ -12,17 +12,21 @@ export default function BlogHeadline() {
       <Col
         span={24}
         style={{
-          fontSize: 70,
+          fontSize: 45,
           fontWeight: 'bold',
         }}
       >
-        <h1>도치의 블로그</h1>
+        <h1>Dochi's Blog</h1>
         <p
           style={{
             fontSize: 17,
           }}
         >
-          게임 클라이언트 개발자에서 웹 프론트엔드로 전향하는 중인 개발자입니다.
+          게임 클라이언트 개발에서 웹 프론트-엔드 개발로 전향 중인 개발자입니다.
+          React.js와 Next.js를 사용하여 만든 블로그이며, 현재 TypeScript를
+          공부하고 있습니다.
+          <br />
+          기술 스택: Unity, C#, C++, JavaScript, React, Next.js, TypeScript
         </p>
       </Col>
     </Row>

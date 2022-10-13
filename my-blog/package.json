@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
@@ -14,6 +16,7 @@
     "@sanity/client": "^3.4.1",
     "antd": "^4.23.5",
     "dayjs": "^1.11.5",
+    "gh-pages": "^4.0.0",
     "next": "^12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -22,5 +25,6 @@
   "devDependencies": {
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1"
-  }
+  },
+  "homepage": "https://dochi486.github.io/nextjs-blog/"
 }
